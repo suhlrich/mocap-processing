@@ -1,0 +1,193 @@
+Loaded model subject_scale_walk from file C:\Users\Scott Uhlrich\Dropbox\KneeContactMinimization\GrandChallenge6\Models\Rajagopal80_contact_armless.osim
+Couldn't find file 'r_pelvis.vtp'.
+Couldn't find file 'l_pelvis.vtp'.
+Couldn't find file 'sacrum.vtp'.
+Couldn't find file 'r_femur.vtp'.
+Couldn't find file 'r_tibia.vtp'.
+Couldn't find file 'r_fibula.vtp'.
+Couldn't find file 'r_patella.vtp'.
+Couldn't find file 'r_talus.vtp'.
+Couldn't find file 'r_foot.vtp'.
+Couldn't find file 'r_bofoot.vtp'.
+Couldn't find file 'l_femur.vtp'.
+Couldn't find file 'l_tibia.vtp'.
+Couldn't find file 'l_fibula.vtp'.
+Couldn't find file 'l_pat.vtp'.
+Couldn't find file 'l_talus.vtp'.
+Couldn't find file 'l_foot.vtp'.
+Couldn't find file 'l_bofoot.vtp'.
+Couldn't find file 'hat_spine.vtp'.
+Couldn't find file 'hat_jaw.vtp'.
+Couldn't find file 'hat_skull.vtp'.
+Couldn't find file 'hat_ribs_scap.vtp'.
+Updating Model file from 30000 to latest format...
+Loaded model Lernagopal_GC_scaled from file W:\OA_GaitRetraining\Grand Challenge data\6th Grand Challenge\Julie processed files\Lernagopal_GC_scaled.osim
+Couldn't find file 'r_pelvis.vtp'.
+Couldn't find file 'l_pelvis.vtp'.
+Couldn't find file 'sacrum.vtp'.
+Couldn't find file 'r_femur.vtp'.
+Couldn't find file 'fem_cond.vtp'.
+Couldn't find file 'sphere.vtp'.
+Couldn't find file 'sphere.vtp'.
+Couldn't find file 'tib_plat.vtp'.
+Couldn't find file 'tibia_r.vtp'.
+Couldn't find file 'r_fibula.vtp'.
+Couldn't find file 'r_patella.vtp'.
+Couldn't find file 'r_talus.vtp'.
+Couldn't find file 'r_foot.vtp'.
+Couldn't find file 'r_bofoot.vtp'.
+Couldn't find file 'l_femur.vtp'.
+Couldn't find file 'fem_cond.vtp'.
+Couldn't find file 'sphere.vtp'.
+Couldn't find file 'sphere.vtp'.
+Couldn't find file 'tib_plat.vtp'.
+Couldn't find file 'tibia_l.vtp'.
+Couldn't find file 'l_fibula.vtp'.
+Couldn't find file 'l_patella.vtp'.
+Couldn't find file 'l_talus.vtp'.
+Couldn't find file 'l_foot.vtp'.
+Couldn't find file 'l_bofoot.vtp'.
+Couldn't find file 'hat_spine.vtp'.
+Couldn't find file 'hat_jaw.vtp'.
+Couldn't find file 'hat_skull.vtp'.
+Couldn't find file 'hat_ribs_scap.vtp'.
+ControllerSet 'Controllers' was renamed and is being reset to 'controllerset'.
+ConstraintSet 'constraintset' has subcomponents with duplicate name 'coordinatecouplerconstraint'.
+The duplicate is being renamed to 'coordinatecouplerconstraint_0'.
+GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathwrap'.
+The duplicate is being renamed to 'pathwrap_0'.
+GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathwrap'.
+The duplicate is being renamed to 'pathwrap_0'.
+GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathwrap'.
+The duplicate is being renamed to 'pathwrap_0'.
+GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathwrap'.
+The duplicate is being renamed to 'pathwrap_0'.
+ComponentSet 'MiscComponents' was renamed and is being reset to 'componentset'.
+Loaded model subject_scale_walk from file C:\Users\Scott Uhlrich\Dropbox\KneeContactMinimization\GrandChallenge6\Models\Rajagopal80_contact_armless.osim
+Couldn't find file 'r_pelvis.vtp'.
+Couldn't find file 'l_pelvis.vtp'.
+Couldn't find file 'sacrum.vtp'.
+Couldn't find file 'r_femur.vtp'.
+Couldn't find file 'r_tibia.vtp'.
+Couldn't find file 'r_fibula.vtp'.
+Couldn't find file 'r_patella.vtp'.
+Couldn't find file 'r_talus.vtp'.
+Couldn't find file 'r_foot.vtp'.
+Couldn't find file 'r_bofoot.vtp'.
+Couldn't find file 'l_femur.vtp'.
+Couldn't find file 'l_tibia.vtp'.
+Couldn't find file 'l_fibula.vtp'.
+Couldn't find file 'l_pat.vtp'.
+Couldn't find file 'l_talus.vtp'.
+Couldn't find file 'l_foot.vtp'.
+Couldn't find file 'l_bofoot.vtp'.
+Couldn't find file 'hat_spine.vtp'.
+Couldn't find file 'hat_jaw.vtp'.
+Couldn't find file 'hat_skull.vtp'.
+Couldn't find file 'hat_ribs_scap.vtp'.
+Updating Model file from 30000 to latest format...
+Loaded model Lernagopal_GC_scaled from file W:\OA_GaitRetraining\Grand Challenge data\6th Grand Challenge\Julie processed files\Lernagopal_GC_scaled.osim
+Couldn't find file 'r_pelvis.vtp'.
+Couldn't find file 'l_pelvis.vtp'.
+Couldn't find file 'sacrum.vtp'.
+Couldn't find file 'r_femur.vtp'.
+Couldn't find file 'fem_cond.vtp'.
+Couldn't find file 'sphere.vtp'.
+Couldn't find file 'sphere.vtp'.
+Couldn't find file 'tib_plat.vtp'.
+Couldn't find file 'tibia_r.vtp'.
+Couldn't find file 'r_fibula.vtp'.
+Couldn't find file 'r_patella.vtp'.
+Couldn't find file 'r_talus.vtp'.
+Couldn't find file 'r_foot.vtp'.
+Couldn't find file 'r_bofoot.vtp'.
+Couldn't find file 'l_femur.vtp'.
+Couldn't find file 'fem_cond.vtp'.
+Couldn't find file 'sphere.vtp'.
+Couldn't find file 'sphere.vtp'.
+Couldn't find file 'tib_plat.vtp'.
+Couldn't find file 'tibia_l.vtp'.
+Couldn't find file 'l_fibula.vtp'.
+Couldn't find file 'l_patella.vtp'.
+Couldn't find file 'l_talus.vtp'.
+Couldn't find file 'l_foot.vtp'.
+Couldn't find file 'l_bofoot.vtp'.
+Couldn't find file 'hat_spine.vtp'.
+Couldn't find file 'hat_jaw.vtp'.
+Couldn't find file 'hat_skull.vtp'.
+Couldn't find file 'hat_ribs_scap.vtp'.
+ControllerSet 'Controllers' was renamed and is being reset to 'controllerset'.
+ConstraintSet 'constraintset' has subcomponents with duplicate name 'coordinatecouplerconstraint'.
+The duplicate is being renamed to 'coordinatecouplerconstraint_0'.
+GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathwrap'.
+The duplicate is being renamed to 'pathwrap_0'.
+GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathwrap'.
+The duplicate is being renamed to 'pathwrap_0'.
+GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathwrap'.
+The duplicate is being renamed to 'pathwrap_0'.
+GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathwrap'.
+The duplicate is being renamed to 'pathwrap_0'.
+ComponentSet 'MiscComponents' was renamed and is being reset to 'componentset'.
+Loaded model subject_scale_walk from file C:\Users\Scott Uhlrich\Dropbox\KneeContactMinimization\GrandChallenge6\Models\Rajagopal80_contact_armless_noMarkers.osim
+Couldn't find file 'r_pelvis.vtp'.
+Couldn't find file 'l_pelvis.vtp'.
+Couldn't find file 'sacrum.vtp'.
+Couldn't find file 'r_femur.vtp'.
+Couldn't find file 'r_tibia.vtp'.
+Couldn't find file 'r_fibula.vtp'.
+Couldn't find file 'r_patella.vtp'.
+Couldn't find file 'r_talus.vtp'.
+Couldn't find file 'r_foot.vtp'.
+Couldn't find file 'r_bofoot.vtp'.
+Couldn't find file 'l_femur.vtp'.
+Couldn't find file 'l_tibia.vtp'.
+Couldn't find file 'l_fibula.vtp'.
+Couldn't find file 'l_pat.vtp'.
+Couldn't find file 'l_talus.vtp'.
+Couldn't find file 'l_foot.vtp'.
+Couldn't find file 'l_bofoot.vtp'.
+Couldn't find file 'hat_spine.vtp'.
+Couldn't find file 'hat_jaw.vtp'.
+Couldn't find file 'hat_skull.vtp'.
+Couldn't find file 'hat_ribs_scap.vtp'.
+Updating Model file from 30000 to latest format...
+Loaded model Lernagopal_GC from file W:\OA_GaitRetraining\Grand Challenge data\6th Grand Challenge\Julie processed files\Lernagopal_GC.osim
+Couldn't find file 'r_pelvis.vtp'.
+Couldn't find file 'l_pelvis.vtp'.
+Couldn't find file 'sacrum.vtp'.
+Couldn't find file 'r_femur.vtp'.
+Couldn't find file 'fem_cond.vtp'.
+Couldn't find file 'sphere.vtp'.
+Couldn't find file 'sphere.vtp'.
+Couldn't find file 'tib_plat.vtp'.
+Couldn't find file 'tibia_r.vtp'.
+Couldn't find file 'r_fibula.vtp'.
+Couldn't find file 'r_patella.vtp'.
+Couldn't find file 'r_talus.vtp'.
+Couldn't find file 'r_foot.vtp'.
+Couldn't find file 'r_bofoot.vtp'.
+Couldn't find file 'l_femur.vtp'.
+Couldn't find file 'fem_cond.vtp'.
+Couldn't find file 'sphere.vtp'.
+Couldn't find file 'sphere.vtp'.
+Couldn't find file 'tib_plat.vtp'.
+Couldn't find file 'tibia_l.vtp'.
+Couldn't find file 'l_fibula.vtp'.
+Couldn't find file 'l_patella.vtp'.
+Couldn't find file 'l_talus.vtp'.
+Couldn't find file 'l_foot.vtp'.
+Couldn't find file 'l_bofoot.vtp'.
+Couldn't find file 'hat_spine.vtp'.
+Couldn't find file 'hat_jaw.vtp'.
+Couldn't find file 'hat_skull.vtp'.
+Couldn't find file 'hat_ribs_scap.vtp'.
+ConstraintSet 'constraintset' has subcomponents with duplicate name 'coordinatecouplerconstraint'.
+The duplicate is being renamed to 'coordinatecouplerconstraint_0'.
+GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathwrap'.
+The duplicate is being renamed to 'pathwrap_0'.
+GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathwrap'.
+The duplicate is being renamed to 'pathwrap_0'.
+GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathwrap'.
+The duplicate is being renamed to 'pathwrap_0'.
+GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathwrap'.
+The duplicate is being renamed to 'pathwrap_0'.

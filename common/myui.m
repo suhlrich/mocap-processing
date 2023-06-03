@@ -1,0 +1,6 @@
+function myui()
+	figure
+	uicontrol('Style','popupmenu',...
+	'String',{'Red';'Green';'Blue'},...
+	'Position',[40 70 80 20]);
+end
