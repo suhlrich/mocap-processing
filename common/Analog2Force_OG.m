@@ -14,7 +14,7 @@ OGCalibMatrix.FP1 = diag([1000 1000 2000 600 400 300]) ;
 OGCalibMatrix.FP2 = diag([1000 1000 2000 900 600 450]) ;
 OGCalibMatrix.FP3 = diag([1000 1000 2000 900 600 450]) ;
 
-h = 0.006 ; %meters, height of floor off lab coordinate system
+h = 0.006 ; %meters, height of floor off lab coordinate system off coordinate system
 
 R1 = [0 1 0; 1 0 0; 0 0 -1] ; % PT
 R2 = [-1 0 0; 0 1 0; 0 0 -1] ; % Middle FP
