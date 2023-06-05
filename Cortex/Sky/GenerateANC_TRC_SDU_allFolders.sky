@@ -1,0 +1,115 @@
+' 
+'
+' Generate TRC and/or ANC files from a set of .cap files
+'
+' This puts all the files in a sub folder whose name is hardcoded in
+' this script.  You can change the folder name here or add a browser to find it.
+'
+' You can also change which file types are output
+
+
+Sub SkyMain 
+	'Dim weeks = {7, 11, 25, 39, 52} 
+	Dim weeks = {52} 
+	Dim subjectRange = {147,160}
+	Dim subjects(subjectRange(1)-subjectRange(0))  ' initialize array for all subjects
+	subjects(0) = subjectRange(0) 
+	For i = 1 To subjectRange(1) - subjectRange(0)
+		subjects(i) = subjects(i - 1) + 1  
+	Next 'make subject array
+	For subCtr = 0 To subjects.GetUpperBound(0)
+		subject = subjects(subCtr)
+		For wkCtr = 0 To weeks.GetUpperBound(0)
+			week = weeks(wkCtr)
+				'These set what to export
+			EXPORT_TRC = True
+				EXPORT_ANC = True
+		
+			'define loading folder
+		'strInputFolder = swCurDir()
+			strInputFolder = "W:\OA_GaitRetraining\DATA\Subject" + Format(subject, "g") + "\Gait\Week" + Format(week, "g") + "\"
+		Message(strInputFolder)
+		
+			'check if Edited folder exists, if so break the loop
+			strOutputFolder = strInputFolder + "Edited\"
+			
+			Dim direcTest As New IO.DirectoryInfo(strOutputFolder)
+			If direcTest.Exists Then
+				editedFiles = Directory(strOutputFolder)
+				editedTrialsDone = Directory(strInputFolder + "Trimmed_*")
+				If editedFiles.Count > 7 Then
+					Message("Sky already run here. Moving on.")
+					Continue For
+				Else If editedTrialsDone.Count < 1
+					Message("Edited Folder exists but is empty and no captures have been trimmed. Moving on.")
+					Continue For					
+				End If
+				Message("Edited Folder exists, but Sky hasnt been run. Processing Sky for " + strOutputFolder)
+			Else
+				Message("No Edited Folder. Processing Sky for " + strOutputFolder)
+				MakeFolder(strOutputFolder)
+			End If
+		
+			strInputFilePattern = "Trimmed_*.cap"
+
+			strInputQuery = strInputFolder + strInputFilePattern
+			listFiles = Directory(strInputQuery)
+
+	bLegacyNaming = swCapture_GetSingleMSLegacyNamingEnabled()
+
+	Message("Processing Captures in: " + strInputFolder)
+
+	For each strFile in listFiles
+		'Skip calibration captures
+		If (strFile.StartsWith("CalFrame") OrElse strFile.StartsWith("CalWand")) Then
+			Message("Skipping: " + strFile)
+			Continue For
+		End If
+
+		' Load CAP
+		strFullFile = strInputFolder + strFile
+		Message("Loading " + strFullFile)
+		iSuccess = swCapture_Load(strFullFile, False)
+		
+	
+		' Extract capture name.
+		strCapFullPath = swCapture_GetName()
+		PathArray = split(strCapFullPath, "\", -1, 1)	' Split folders
+		StrCap = PathArray(UBound(PathArray))		' Use last one (the file name)
+		StrCap = Left(StrCap, len(StrCap) - 4)		' Strip the ".cap" from the end
+		StrCap = Right(StrCap, len(StrCap) - 8) 'chop off Trimmed_ prefix
+		
+		If (EXPORT_TRC) Then
+			' Export TRC for each MarkerSet
+			nMars = swCapture_GetNumberOfMarkersets()
+			For iMars = 0 To nMars - 1 
+				swCapture_SetMainMarkerset(iMars, True)
+				strOutputTRC = ""
+
+
+				strOutputTRC = strOutputFolder + strCap + ".trc"
+
+
+				Message("Write: <" + strOutputTRC + ">")
+				swExport_Trc(strOutputTRC)
+			next 'next markerset
+		End If
+
+		If (EXPORT_ANC) Then
+			' Export the ANC file for the capture
+			strOutputANC = strOutputFolder + strCap + ".anc"
+			swPopups_SetQuietMode(1) 'don't want all the popups
+			Message("Write: <" + strOutputANC + ">")
+			swLoadedTracks_ExportAncFile(strOutputANC)
+			swPopups_SetQuietMode(0)
+		End If
+
+		' Check for a cancel after each capture
+		if swCancelled() then
+			Message("Cancelled by user")
+			Exit for
+		end if
+	Next 'next capture
+			Next 'next wkCtr value
+		Next 'next subCtr value
+	End Sub
