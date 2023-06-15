@@ -3,6 +3,8 @@ clear all;
 close all;
 clc;
 
+rotate_xForward = 0 % for overground data facing the screen
+
 [files, inpath]=uigetfile('*.trc','Select input file','multiselect','on');
 files=cellstr(files);
 [a b] = size(files);
@@ -19,9 +21,11 @@ R = [1 0 0;
     0 1 0];
 
 %rotate x forward
-R = R* [0 0 -1;
-        0 1 0;
-        1 0 0] ;
+if rotate_xForward
+    R = R* [0 0 -1;
+            0 1 0;
+            1 0 0] ;
+end
 
 mrkdata = pos;
 for i=1:3:size(mrkdata,2)-2;

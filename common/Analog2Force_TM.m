@@ -1,6 +1,6 @@
-function [forces_proc_meters] = Analog2Force(forcesV,TreadmillCalibMatrix,filtfreq,samp_rate,threshold_high,threshold_low,newTrial) ;
+function [forces_proc_meters] = Analog2Force(forcesV,TreadmillCalibMatrix,filtfreq,samp_rate,threshold_high,threshold_low) ;
 
-disp('You improved the TM COP in February 2020')
+disp('You are using new Bertec TM. If you want the old treadmill settings, theres a file Analog2Force_old with those settings.')
 % [Fxyz_1 COPxyz_1 Tz_1 Fxyz_2 COPxyz_2 Tz_2]
 
 % %%% For testing as script %%%
@@ -26,12 +26,8 @@ else
     forces_filt = forcesV ;
 end
 
-% Treadmill wearplates were changed on 9/6/2018. The thickness of the plate
-% increased from 9.5mm to 11.5mm.
-h = 0.0115 ; %meters, height of belt off coordinate system
-if ~newTrial
-    h = 0.0095 ; %meters, height of belt off coordinate system
-end 
+h = 0 ; %meters, height of belt off coordinate system. The forces are reported at the height of the belt on the new treadmill
+
 forces_units = zeros(size(forcesV)) ; % Converted into N and Nm - filtered (Fx, Fy, Fz, Mx, My, Mz)
 unfilteredforces_units = forces_units ; % Convereted into N and Nm - unfiltered (Fx, Fy, Fz, Mx, My, Mz)
 forces_proc = zeros(size(forcesV,1),14) ; % Matrix with calculated stuff (Fx, Fy, Fz, COPx, COPy, COPz, Tz)
@@ -57,11 +53,11 @@ for ii = 1:size(forcesV,1)
     % FOR FP1: Fx = Fay; Fy = Fax; Fz = -Faz ; COPx = COPay ; COPy = COPax ; COPz = 0 ; Tz = -Taz ;
     % BUT, we negate all forces to turn into reaction forces 
     forces_proc(ii,1:7) = [-forces_units(ii,2) -forces_units(ii,1) forces_units(ii,3) ...
-        COPay1 COPax1 h Taz1] ;
+        COPay1 COPax1 0 Taz1] ; % The markers are reported from the height of the belt, so COPz=0 on new treadmill.
     % FOR FP2: Fz = Fay; Fy = Fax; Fz = -Faz ; COPx = COPay ; COPy = COPax + .9712 m ; COPz = 0 ; Tz = -Taz 
     % BUT, we negate all forces to turn into reaction forces
     forces_proc(ii,8:14) = [-forces_units(ii,8) -forces_units(ii,7) forces_units(ii,9) ...
-        COPay2 COPax2+0.9812 h Taz2] ;
+        COPay2 COPax2+1.124 0 Taz2] ;
 end
 
 %
